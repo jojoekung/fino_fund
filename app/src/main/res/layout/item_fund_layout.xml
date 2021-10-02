@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    xmlns:tool="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvFundName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tool:layout_constraintEnd_toStartOf="@+id/tvNav"
+        tool:layout_constraintStart_toStartOf="parent"
+        tool:layout_constraintTop_toTopOf="parent"
+        tools:text="fund name" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/time"
+        tool:layout_constraintBottom_toBottomOf="parent"
+        tool:layout_constraintStart_toStartOf="@+id/tvFundName"
+        tool:layout_constraintTop_toBottomOf="@+id/tvFundName" />
+
+    <TextView
+        android:id="@+id/tvUpdateDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="14sp"
+        tool:layout_constraintBottom_toBottomOf="@+id/imageView"
+        tool:layout_constraintEnd_toStartOf="@+id/tvNavReturn"
+        tool:layout_constraintStart_toEndOf="@+id/imageView"
+        tool:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:text="11 jan 2021" />
+
+    <TextView
+        android:id="@+id/tvNav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="16sp"
+        tool:layout_constraintBottom_toBottomOf="@+id/tvFundName"
+        tool:layout_constraintEnd_toEndOf="parent"
+        tool:layout_constraintStart_toStartOf="@+id/tvNavReturn"
+        tool:layout_constraintTop_toTopOf="@+id/tvFundName"
+        tools:text="nav: 10.2" />
+
+    <TextView
+        android:id="@+id/tvNavReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="16sp"
+        tool:layout_constraintBottom_toBottomOf="@+id/tvUpdateDate"
+        tool:layout_constraintEnd_toEndOf="parent"
+        tool:layout_constraintTop_toTopOf="@+id/tvUpdateDate"
+        tools:text="nav return: 52.22" />
+</androidx.constraintlayout.widget.ConstraintLayout>
