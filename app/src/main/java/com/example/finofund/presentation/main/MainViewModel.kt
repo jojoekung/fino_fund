@@ -4,11 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.finofund.data.Fund
-import com.example.finofund.domain.FundUseCase
+import com.example.finofund.data.remote.RemoteFund
 
 class MainViewModel : ViewModel() {
 
-    private val fundUseCase = FundUseCase()
+    private val remoteFund = RemoteFund()
 
     private val _fund = MutableLiveData<List<Fund>>()
     val fund: LiveData<List<Fund>>
@@ -25,7 +25,7 @@ class MainViewModel : ViewModel() {
 
     fun getFund() {
 
-        fundUseCase.getAllFund({
+        remoteFund.getFund({
             hideLoading()
             _fund.postValue(it)
         }, {
